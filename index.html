@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Eis aqui seus presentes!</title>
+    <title>Presente Dia dos Namorados</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
@@ -21,7 +21,7 @@
         /* ===== Títulos ===== */
         .main-title {
             font-family: 'Great Vibes', cursive;
-            font-size: 3em;
+            font-size: 2.8em;
             margin: 60px 0 16px;
             line-height: 1.2;
         }
@@ -36,9 +36,8 @@
         .carousel-3d {
             position: relative;
             width: 90%;
-            max-width: 400px;
-            height: auto;
-            aspect-ratio: 4/3;
+            max-width: 360px;
+            height: 270px;
             margin: 40px auto 16px;
             perspective: 1000px;
         }
@@ -67,16 +66,16 @@
             border: none;
             font-size: 1.5em;
             cursor: pointer;
-            width: 36px;
-            height: 36px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             z-index: 5;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        #prev { left: -48px; }
-        #next { right: -48px; }
+        #prev { left: 10px; }
+        #next { right: 10px; }
 
         /* ===== Caixa de Texto Carinhoso (com rolagem) ===== */
         .texto-carinho {
@@ -137,6 +136,7 @@
             font-family: 'Poppins', sans-serif;
             text-align: center;
             transition: background 0.3s;
+            white-space: nowrap;
         }
         .presente:hover {
             background: rgba(255,105,180,1);
@@ -145,7 +145,7 @@
         /* ===== Media Queries para Mobile ===== */
         @media (max-width: 480px) {
             .main-title {
-                font-size: 2.2em;
+                font-size: 2em;
                 margin: 40px 0 12px;
             }
             .presentes-title {
@@ -154,19 +154,19 @@
             }
             .carousel-3d {
                 width: 95%;
-                height: auto;
-                aspect-ratio: 4/3;
+                max-width: 300px;
+                height: 225px;
                 margin: 20px auto 12px;
             }
             .control {
                 font-size: 1.2em;
-                width: 32px;
-                height: 32px;
+                width: 28px;
+                height: 28px;
             }
             .texto-carinho {
                 height: 100px;
                 padding: 12px;
-                font-size: 0.95em;
+                font-size: 0.9em;
                 margin-bottom: 20px;
             }
             .presentes {
@@ -184,7 +184,6 @@
     <div class="carousel-3d">
         <button id="prev" class="control">‹</button>
         <button id="next" class="control">›</button>
-
         <div class="slide">
             <img src="foto1.png" alt="Foto 1">
         </div>
@@ -203,7 +202,7 @@
     <div class="texto-carinho">
         <p>
             Meu bem, minha vida, meu amor, meu stress. Dizem que uma imagem vale mais que mil palavras, mas a palavra stress te define melhor do que qualquer imagem. Você me faz mais forte, me faz querer mais, faz com que eu me esforce mais, você é minha força e meu porto seguro. Tudo que eu faço hoje é pensando em você. Minha vida se tornou você e eu já não consigo mais me imaginar sem te ter ao meu lado. Eu te amo se tornou pequeno demais para o que sinto e não há mais formas de te dizer a grandiosidade do que sinto, então agora, a única coisa que posso fazer é tentar:
-            "Minha alma foi pintada pela sua. Pintada pelas cores que faltavam, e hoje está completa. Não há como ser racional, afinal, o amor é a própria definição de loucura. Porém, acredito que a loucura do amor é a maior de todas as bençãos dos céus. No mundo não há um coração para mim como seu, assim como não há nenhum amor no mundo para você como o meu. Eu nasci para plantar flores no seu coração, para te proteger e te fazer sentir todas as coisas que você sempre sonhou lendo seus livros de romance (não os de pornografia). Eu te amo. Amo cada defeito, cada filme ruim que você gosta, cada música podre da Taylor Swift que você canta, cada centímetro e curva do seu corpo. Eu te amo, cachaça"
+            "Minha alma foi pintada pela sua. Pintada pelas cores que faltavam, e hoje está completa. Não há como ser racional, afinal, o amor é a própria definição de loucura. Porém, acredito que a loucura do amor é a maior de todas as bençãos dos céus. No mundo não há um coração para mim como seu, assim como não há nenhum amor no mundo para você como o meu. Eu nasci para plantar flores no seu coração, para te proteger e te fazer sentir todas as coisas que você sempre sonhou lendo seus livros de romance (não os de pornografia). Eu te amo. Amo cada defeito, cada filme ruim que você gosta, cada música podre da Taylor Swift que você canta, cada centímetro e curva do seu corpo. Eu te amo, cachoha"
         </p>
     </div>
 
@@ -212,7 +211,7 @@
 
     <!-- ===== Botões de Presente ===== -->
     <div class="presentes">
-       <div class="presente" data-value="🫵​Receba uma flor💐​">Presente 1</div>Add commentMore actions
+        <div class="presente" data-value="🫵​Receba uma flor💐​">Presente 1</div>
         <div class="presente" data-value="Presente idiota">Presente 2</div>
         <div class="presente" data-value="Vale lanchão + filme de menina">Presente 3</div>
         <div class="presente" data-value="Pe🐙​lu🐋​cia​🦃​">Presente 4</div>
@@ -256,7 +255,7 @@
             updateCarousel();
         });
 
-        // inicializa o carrossel
+        // Inicializa o carrossel
         updateCarousel();
 
         // ===== Mostrar nome do presente ao clicar =====
