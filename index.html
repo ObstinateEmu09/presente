@@ -35,9 +35,10 @@
         /* ===== Carrossel 3D ===== */
         .carousel-3d {
             position: relative;
-            width: 90%;
+            width: 95%;
             max-width: 360px;
-            height: 270px;
+            /* define a proporção 4:3 para a altura ser calculada automaticamente */
+            aspect-ratio: 4 / 3;
             margin: 40px auto 16px;
             perspective: 1000px;
         }
@@ -74,12 +75,13 @@
             align-items: center;
             justify-content: center;
         }
-        #prev { left: 10px; }
-        #next { right: 10px; }
+        /* Aproxima as setas para dentro do carrossel */
+        #prev { left: 8px; }
+        #next { right: 8px; }
 
         /* ===== Caixa de Texto Carinhoso (com rolagem) ===== */
         .texto-carinho {
-            max-width: 90%;
+            max-width: 95%;
             width: 600px;
             height: 120px;
             margin: 0 auto 24px;
@@ -119,9 +121,9 @@
         /* ===== Botões de Presente ===== */
         .presentes {
             display: grid;
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 12px;
-            max-width: 90%;
+            max-width: 95%;
             width: 600px;
             margin: 0 auto 40px;
         }
@@ -153,9 +155,9 @@
                 margin: 12px 0 6px;
             }
             .carousel-3d {
-                width: 95%;
+                width: 98%;
                 max-width: 300px;
-                height: 225px;
+                aspect-ratio: 4 / 3;
                 margin: 20px auto 12px;
             }
             .control {
@@ -184,15 +186,9 @@
     <div class="carousel-3d">
         <button id="prev" class="control">‹</button>
         <button id="next" class="control">›</button>
-        <div class="slide">
-            <img src="foto1.png" alt="Foto 1">
-        </div>
-        <div class="slide">
-            <img src="foto2.png" alt="Foto 2">
-        </div>
-        <div class="slide">
-            <img src="foto3.png" alt="Foto 3">
-        </div>
+        <div class="slide"><img src="foto1.png" alt="Foto 1"></div>
+        <div class="slide"><img src="foto2.png" alt="Foto 2"></div>
+        <div class="slide"><img src="foto3.png" alt="Foto 3"></div>
     </div>
 
     <!-- ===== Título Principal ===== -->
@@ -202,7 +198,7 @@
     <div class="texto-carinho">
         <p>
             Meu bem, minha vida, meu amor, meu stress. Dizem que uma imagem vale mais que mil palavras, mas a palavra stress te define melhor do que qualquer imagem. Você me faz mais forte, me faz querer mais, faz com que eu me esforce mais, você é minha força e meu porto seguro. Tudo que eu faço hoje é pensando em você. Minha vida se tornou você e eu já não consigo mais me imaginar sem te ter ao meu lado. Eu te amo se tornou pequeno demais para o que sinto e não há mais formas de te dizer a grandiosidade do que sinto, então agora, a única coisa que posso fazer é tentar:
-            "Minha alma foi pintada pela sua. Pintada pelas cores que faltavam, e hoje está completa. Não há como ser racional, afinal, o amor é a própria definição de loucura. Porém, acredito que a loucura do amor é a maior de todas as bençãos dos céus. No mundo não há um coração para mim como seu, assim como não há nenhum amor no mundo para você como o meu. Eu nasci para plantar flores no seu coração, para te proteger e te fazer sentir todas as coisas que você sempre sonhou lendo seus livros de romance (não os de pornografia). Eu te amo. Amo cada defeito, cada filme ruim que você gosta, cada música podre da Taylor Swift que você canta, cada centímetro e curva do seu corpo. Eu te amo, cachoha"
+            "Minha alma foi pintada pela sua. Pintada pelas cores que faltavam, e hoje está completa. Não há como ser racional, afinal, o amor é a própria definição de loucura. Porém, acredito que a loucura do amor é a maior de todas as bençãos dos céus. No mundo não há um coração para mim como seu, assim como não há nenhum amor no mundo para você como o meu. Eu nasci para plantar flores no seu coração, para te proteger e te fazer sentir todas as coisas que você sempre sonhou lendo seus livros de romance (não os de pornografia). Eu te amo. Amo cada defeito, cada filme ruim que você gosta, cada música podre da Taylor Swift que você canta, cada centímetro e curva do seu corpo. Eu te amo, cachaça"
         </p>
     </div>
 
@@ -255,7 +251,7 @@
             updateCarousel();
         });
 
-        // Inicializa o carrossel
+        // inicializa o carrossel
         updateCarousel();
 
         // ===== Mostrar nome do presente ao clicar =====
@@ -270,3 +266,4 @@
     </script>
 </body>
 </html>
+
